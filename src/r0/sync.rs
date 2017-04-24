@@ -15,7 +15,7 @@ pub mod get_state_events {
         pub room_id: RoomId
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();
@@ -69,7 +69,7 @@ pub mod get_state_events_for_empty_key {
         pub event_type: String
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();
@@ -125,7 +125,7 @@ pub mod get_state_events_for_key {
         pub state_key: String,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();
@@ -187,7 +187,7 @@ pub mod get_member_events {
         pub chunk: Vec<MemberEvent>
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();
@@ -272,7 +272,7 @@ pub mod get_message_events {
         pub end: String
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = QueryParams;
@@ -439,7 +439,7 @@ pub mod sync_events {
         pub presence: Presence
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = ();
         type QueryParams = QueryParams;

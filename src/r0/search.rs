@@ -211,7 +211,7 @@ pub mod search_events {
         pub result: Event,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = ();
         type QueryParams = QueryParams;

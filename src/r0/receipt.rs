@@ -32,7 +32,7 @@ pub mod create_receipt {
     #[derive(Clone, Copy, Debug, Deserialize, Serialize)]
     pub struct Response;
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();

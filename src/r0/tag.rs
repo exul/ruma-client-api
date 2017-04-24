@@ -17,7 +17,7 @@ pub mod create_tag {
         pub tag: String
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = TagInfo;
         type PathParams = PathParams;
         type QueryParams = ();
@@ -80,7 +80,7 @@ pub mod get_tags {
         pub tags: TagEventContent,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();
@@ -136,7 +136,7 @@ pub mod delete_tag {
         pub tag: String
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();

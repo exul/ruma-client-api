@@ -30,7 +30,7 @@ pub mod redact_event {
     }
 
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = PathParams;
         type QueryParams = ();

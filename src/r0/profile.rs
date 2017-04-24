@@ -21,7 +21,7 @@ pub mod get_display_name {
     #[derive(Clone, Copy, Debug)]
     pub struct Endpoint;
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();
@@ -82,7 +82,7 @@ pub mod set_display_name {
     #[derive(Clone, Copy, Debug)]
     pub struct Endpoint;
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = PathParams;
         type QueryParams = ();
@@ -142,7 +142,7 @@ pub mod get_avatar_url {
     #[derive(Clone, Copy, Debug)]
     pub struct Endpoint;
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();
@@ -202,7 +202,7 @@ pub mod set_avatar_url {
     #[derive(Clone, Copy, Debug)]
     pub struct Endpoint;
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = PathParams;
         type QueryParams = ();
@@ -264,7 +264,7 @@ pub mod get_profile {
     #[derive(Clone, Copy, Debug)]
     pub struct Endpoint;
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();

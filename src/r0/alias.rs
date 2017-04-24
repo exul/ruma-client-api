@@ -16,7 +16,7 @@ pub mod create_alias {
     #[derive(Clone, Copy, Debug)]
     pub struct Endpoint;
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = super::PathParams;
         type QueryParams = ();
@@ -58,7 +58,7 @@ pub mod delete_alias {
     #[derive(Clone, Copy, Debug)]
     pub struct Endpoint;
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = super::PathParams;
         type QueryParams = ();
@@ -109,7 +109,7 @@ pub mod get_alias {
         pub servers: Vec<String>,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = super::PathParams;
         type QueryParams = ();

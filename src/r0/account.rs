@@ -97,7 +97,7 @@ pub mod register {
         pub device_id: String
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = ();
         type QueryParams = QueryParams;
@@ -152,7 +152,7 @@ pub mod request_password_change_token {
     #[derive(Clone, Copy, Debug)]
     pub struct Endpoint;
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = ();
         type QueryParams = ();
@@ -196,7 +196,7 @@ pub mod deactivate {
 
     // TODO: missing BodyParams
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = ();
         type QueryParams = ();
@@ -245,7 +245,7 @@ pub mod change_password {
     #[derive(Clone, Copy, Debug)]
     pub struct Endpoint;
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = ();
         type QueryParams = ();
@@ -297,7 +297,7 @@ pub mod request_register_token {
     #[derive(Clone, Copy, Debug)]
     pub struct Endpoint;
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = ();
         type QueryParams = ();

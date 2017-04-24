@@ -23,7 +23,7 @@ pub mod create_typing_event {
         pub timeout: Option<u64>
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = PathParams;
         type QueryParams = ();

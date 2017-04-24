@@ -34,7 +34,7 @@ pub mod get_context {
         pub state: Vec<only::StateEvent>,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = QueryParams;

@@ -115,7 +115,7 @@ pub mod create_filter {
         pub filter_id: String
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = FilterDefinition;
         type PathParams = PathParams;
         type QueryParams = ();
@@ -170,7 +170,7 @@ pub mod get_filter {
         pub filter_id: String
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();

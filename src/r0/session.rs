@@ -48,7 +48,7 @@ pub mod login {
         pub user_id: String,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = ();
         type QueryParams = ();
@@ -90,7 +90,7 @@ pub mod logout {
     #[derive(Clone, Copy, Debug)]
     pub struct Endpoint;
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = ();
         type QueryParams = ();

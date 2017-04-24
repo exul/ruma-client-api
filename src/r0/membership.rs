@@ -38,7 +38,7 @@ pub mod invite_user {
         pub room_id: RoomId,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = PathParams;
         type QueryParams = ();
@@ -105,7 +105,7 @@ pub mod join_room_by_id_or_alias {
         pub room_id_or_alias: RoomIdOrAliasId,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = PathParams;
         type QueryParams = ();
@@ -182,7 +182,7 @@ pub mod join_room_by_id {
         pub room_id: RoomId,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = PathParams;
         type QueryParams = ();
@@ -235,7 +235,7 @@ pub mod forget_room {
         pub room_id: RoomId,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();
@@ -288,7 +288,7 @@ pub mod leave_room {
         pub room_id: RoomId,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();
@@ -349,7 +349,7 @@ pub mod kick_user {
         pub room_id: RoomId,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = PathParams;
         type QueryParams = ();
@@ -408,7 +408,7 @@ pub mod unban_user {
         pub room_id: RoomId,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = PathParams;
         type QueryParams = ();
@@ -469,7 +469,7 @@ pub mod ban_user {
         pub room_id: RoomId,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = PathParams;
         type QueryParams = ();

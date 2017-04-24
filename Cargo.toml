@@ -11,10 +11,10 @@ repository = "https://github.com/ruma/ruma-client-api"
 version = "0.1.0"
 
 [dependencies]
-ruma-api = "0.3.0"
-ruma-events = "0.3.0"
-ruma-identifiers = "0.6.0"
-ruma-signatures = "0.1.0"
-serde = "0.8.21"
-serde_derive = "0.8.21"
-serde_json = "0.8.4"
+ruma-api = { git = "https://github.com/exul/ruma-api", branch = "update-dependencies" }
+ruma-events = "0.8.0"
+ruma-identifiers = "0.11.0"
+ruma-signatures = "0.3.0"
+serde = "1.0.1"
+serde_derive = "1.0.1"
+serde_json = "1.0.0"

@@ -16,7 +16,7 @@ pub mod set_room_account_data {
         pub event_type: String,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ::serde_json::Value;
         type PathParams = PathParams;
         type QueryParams = ();
@@ -72,7 +72,7 @@ pub mod set_global_account_data  {
         pub event_type: String,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ::serde_json::Value;
         type PathParams = PathParams;
         type QueryParams = ();

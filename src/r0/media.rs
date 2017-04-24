@@ -15,7 +15,7 @@ pub mod get_content {
         pub server_name: String,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();
@@ -69,7 +69,7 @@ pub mod create_content {
         pub content_uri: String,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = (); // TODO: How should a file be represented as the request body?
         type PathParams = ();
         type QueryParams = ();
@@ -147,7 +147,7 @@ pub mod get_content_thumbnail {
         pub width: Option<u64>,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = QueryParams;

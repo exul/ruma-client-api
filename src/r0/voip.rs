@@ -15,7 +15,7 @@ pub mod get_turn_server_info {
         pub ttl: u64
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = ();
         type QueryParams = ();

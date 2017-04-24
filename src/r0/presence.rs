@@ -23,7 +23,7 @@ pub mod set_presence {
         pub presence: PresenceState
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = PathParams;
         type QueryParams = ();
@@ -89,7 +89,7 @@ pub mod get_presence {
         pub presence: PresenceState
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();
@@ -153,7 +153,7 @@ pub mod update_presence_subscriptions {
         invite: Vec<UserId>
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = PathParams;
         type QueryParams = ();
@@ -207,7 +207,7 @@ pub mod get_subscribed_presences {
         pub user_id: UserId
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = PathParams;
         type QueryParams = ();

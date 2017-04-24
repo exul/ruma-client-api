@@ -22,7 +22,7 @@ pub mod create_contact {
         pub sid: String,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = ();
         type QueryParams = ();
@@ -84,7 +84,7 @@ pub mod get_contacts {
         pub medium: Medium,
     }
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ();
         type PathParams = ();
         type QueryParams = ();
@@ -136,7 +136,7 @@ pub mod request_contact_verification_token {
     #[derive(Clone, Copy, Debug)]
     pub struct Endpoint;
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = BodyParams;
         type PathParams = ();
         type QueryParams = ();

@@ -23,7 +23,7 @@ pub mod send_state_event_for_empty_key {
     }
 
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ::serde_json::Value;
         type PathParams = PathParams;
         type QueryParams = ();
@@ -87,7 +87,7 @@ pub mod send_state_event_for_key {
     }
 
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ::serde_json::Value;
         type PathParams = PathParams;
         type QueryParams = ();
@@ -152,7 +152,7 @@ pub mod send_message_event {
     }
 
 
-    impl ::Endpoint for Endpoint {
+    impl<'de> ::Endpoint<'de> for Endpoint {
         type BodyParams = ::serde_json::Value;
         type PathParams = PathParams;
         type QueryParams = ();

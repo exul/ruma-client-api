@@ -12,9 +12,9 @@ version = "0.1.0"
 
 [dependencies]
 ruma-api = { git = "https://github.com/exul/ruma-api" }
-ruma-events = { git = "http://github.com/ruma/ruma-events" }
-ruma-identifiers = "0.11.0"
-ruma-signatures = "0.3.0"
-serde = "1.0.1"
-serde_derive = "1.0.1"
+ruma-events = { git = "http://github.com/exul/ruma-events" }
+ruma-identifiers = { git = "https://github.com/exul/ruma-identifiers.git", features = ["diesel"] }
+ruma-signatures = { git = "https://github.com/exul/ruma-signatures", branch = "update-dependencies" }
+serde = "1.0"
+serde_derive = "1.0"
 serde_json = "1.0.0"
